@@ -4,7 +4,7 @@ interface HeaderProps {
 
 export default function Header({ onOpenSidebar }: HeaderProps) {
     return (
-        <nav className="fixed top-0 w-full z-40 bg-[#87CEEB] border-b border-blue-200 px-8 py-8 flex justify-between items-center shadow-md">
+        <nav className="fixed top-0 w-full z-40 bg-[#e5e7eb] border-b border-[#720e0e]/10 px-8 py-8 flex justify-between items-center shadow-md">
             <div className="text-4xl font-black tracking-tighter text-[#720e0e] italic">
                 NongCrib
             </div>
