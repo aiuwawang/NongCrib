@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import { Routes, Route } from 'react-router-dom' 
-import Header from './components/ui/header'
-import Hero from './sections/hero'
-import MainContent from './sections/mainContent'
-import Sidebar from './components/ui/sidebar'
-import Footer from './components/ui/footer'
-import AdminLogin from './pages/admin/login' 
+import Header from './components/header'
+import Hero from './pages/landing/hero'
+import MainContent from './pages/landing/mainContent'
+import Sidebar from './components/sidebar'
+import Footer from './components/footer'
+import AdminLogin from './features/auth/components/login' 
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
