@@ -1,6 +1,6 @@
 import { Seeder } from 'typeorm-extension';
 import { DataSource } from 'typeorm';
-import { User } from '../../modules/users/user.entity'; // Pastikan path ke entity bener
+import { User } from '../../modules/users/user.entity'; 
 import * as bcrypt from 'bcrypt';
 import * as dotenv from 'dotenv';
 
@@ -13,11 +13,11 @@ export default class UserSeeder implements Seeder {
     const adminEmail = process.env.ADMIN_EMAIL || 'hari@nongcrib.com';
     const adminPass = process.env.ADMIN_PASSWORD || 'hari123';
 
-    // Cek biar nggak duplikat
+    
     const adminExists = await repository.findOneBy({ email: adminEmail });
 
     if (!adminExists) {
-      // Kita hash dulu passwordnya
+      
       const hashedPassword = await bcrypt.hash(adminPass, 10);
       
       await repository.insert({

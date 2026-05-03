@@ -1,6 +1,6 @@
 import { DataSource, DataSourceOptions } from 'typeorm';
 import { SeederOptions } from 'typeorm-extension';
-import { User } from '../modules/users/user.entity'; // Pastikan path entity bener
+import { User } from '../modules/users/user.entity'; 
 import * as dotenv from 'dotenv';
 
 dotenv.config();
@@ -12,10 +12,10 @@ export const dataSourceOptions: DataSourceOptions & SeederOptions = {
   username: process.env.DB_USERNAME || 'postgres',
   password: process.env.DB_PASSWORD || 'password',
   database: process.env.DB_NAME || 'nongcrib_db',
-  entities: [User], // Masukin semua entity di sini
-  migrations: ['dist/database/migrations/*.js'], // Tempat file migrasi setelah di-build
-  seeds: ['src/database/seeds/**/*.seeder.ts'],  // Tempat file seeder lu
-  synchronize: false, // Matikan ini kalau sudah pakai migration biar aman
+  entities: [User], 
+  migrations: ['dist/database/migrations/*.js'], 
+  seeds: ['src/database/seeds/**/*.seeder.ts'],  
+  synchronize: false, 
 };
 
 const dataSource = new DataSource(dataSourceOptions);
